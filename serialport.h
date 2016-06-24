@@ -1,5 +1,10 @@
 #ifndef SERIALPORT_H
 #define SERIALPORT_H
+
+#ifdef __cplusplus
+extern "C"{
+#endif // __cplusplus
+
 #include <windows.h>
 
 enum Baudrate
@@ -69,5 +74,9 @@ DWORD readFromSerialPort(HANDLE hSerial, char * buffer, int buffersize);
 DWORD writeToSerialPort(HANDLE hSerial, char * data, int length);
 
 void closeSerialPort(HANDLE hSerial);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif
